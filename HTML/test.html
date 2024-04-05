@@ -6,19 +6,39 @@
     <title>Sample</title>
 </head>
 <body>
-    <h1>フォームサンプル</h1>
+    <h1>マラソン申し込みフォーム</h1>
     <form action="">
         <div>
-            <label for="username">ユーザー名</label>
-            <input type="text" name="username" id="username" placeholder="ユーザー名">
+            <label for="familyname">姓</label>
+            <input type="text" name="familyname" id="familyname" required>
+            <label for="firstname">名</label>
+            <input type="text" name="firstname" id="firstname" required>
         </div>
 
         <div>
+            <p>参加するマラソンを選択：</p>
+            <div>
+                <input type="radio" name="join" id="join1" value="1">
+                <label for="join1">楽しく走ろう5km</label>
+            </div>
+            <div>
+                <input type="radio" name="join" id="join2" value="2">
+                <label for="join2">ハーフマラソン</label>
+            </div>
+            <div>
+                <input type="radio" name="join" id="join3" value="3">
+                <label for="join3">フルマラソン</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="email">メールアドレス</label>
+            <input type="email" name="email" id="email" required>
             <label for="password">パスワード</label>
-            <input type="password" name="password" id="password" placeholder="パスワード">
+            <input type="password" name="password" id="password" required>
         </div>
         <div>
-            <button type="submit">登録</button>
+            <button type="submit">登録する</button>
         </div>
     </form>
 </body>
