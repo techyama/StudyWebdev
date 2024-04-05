@@ -3,6 +3,54 @@ h1 {
     text-align: center;
     text-decoration: maroon underline wavy;
     font-family: Arial, serif;
+    /* displayプロパティ */
+    /* インライン要素のように振舞える */
+    display: inline;
+    /* ブロック要素のように振舞える */
+    display: block;
+    /* インライン要素のように振舞うが、marginやpaddingも適用できる */
+    display: inline-block;
+    /* 要素の非表示 */
+    display: none;
+
+    /* ボックスモデル */
+    /* 要素の縦横幅 */
+    height: auto;
+    width: auto;
+
+    /* 要素内の余白 */
+    /* 4辺一括指定 */
+    padding: 10px;
+    /* 上下|左右 */
+    padding: 5px 10px;
+    /* 上|左右|下 */
+    padding: 1px 2px 2px;
+    /* 上|右|下|左 */
+    padding: 5px 1px 0 2px;
+
+    /* 要素外の余白 */
+    /* 4辺一括指定 */
+    margin: 10px;
+    /* 上下|左右 */
+    margin: 5px 10px;
+    /* 上|左右|下 */
+    margin: 1px 2px 2px;
+    /* 上|右|下|左 */
+    margin: 5px 1px 0 2px;
+
+    /* 太さ */
+    border-width: 0px;
+    /* 色 */
+    border-color: aliceblue;
+    /* 線のスタイル */
+    border-style: solid;
+    /* 丸みを持たせる */
+    border-radius: 10%;
+    /* borderを含めた要素のサイジング */
+    box-sizing: border-box;
+    /* border一括指定 */
+    border: 4px solid aliceblue;
+
 }
 
 h2 {
