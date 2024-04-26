@@ -1,0 +1,25 @@
+/* 適用の優先順位 */
+/* 基本的には上から順に読み込まれる */
+/* purpleが勝つ! */
+h1 {
+    color: red;
+}
+
+h1 {
+    color: purple;
+}
+
+
+/* 適用の詳細度 */
+/* 複数のスタイルが存在して競合が発生している場合、詳細度が高い方が適用される */
+/* 詳細度　ID > クラス > 要素型 */
+/* redが勝つ! */
+.sample button:hover {
+    background-color: red;
+}
+
+button:hover {
+    background-color: purple;
+    /* 競合が起きていないためfont-sizeのみ適用される */
+    font-size: 50px;
+}
