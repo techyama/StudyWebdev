@@ -73,7 +73,7 @@ newH3.innerText = '新規要素参上！！！';
 document.body.appendChild(newH3);
 
 // 子要素を削除
-const remH3 = document.parentElement('h3')
-document.body.removeChild(remH3);
+// const remH3 = document.parentElement(newH3);
+// document.body.removeChild(remH3);
 // 自分自身を削除
-document.body.remove(remH3);
+// document.body.remove(remH3);
