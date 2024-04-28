@@ -47,3 +47,18 @@ const newStudents = students.map(student => {
     return `${student.name} - ${student.score}`;
 })
 
+// テストした値で新しい配列を作る
+const newNumbers = numbers.filter(num => num < 10);
+
+// 受け取ったパラメータから一つの値を返す
+// 第一引数：累積値、第二引数：要素
+// reduceで合計値
+const sum = numbers.reduce((total, number) => total + number);
+
+// reduceで最大値
+const max = students.reduce((bestStudent, student) => {
+    if (bestStudent.score < student.score) {
+        return student;
+    }
+    return bestStudent;
+})
