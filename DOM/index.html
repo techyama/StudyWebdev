@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="app.css">
     <title>DOMsample</title>
 </head>
+
 <body>
+    <h1 id="h1heading">DOMサンプル</h1>
+    <input type="text" placeholder="新しいTodo">
+    <ul>
+        <li>水やりをする</li>
+        <li class="done">歯磨きをする</li>
+        <li class="done">体重を測る</li>
+        <li class="done">ランニングする</li>
+        <li>ヨガをする</li>
+    </ul>
+    <label>全部削除する</label>
+    <input type="checkbox" id="scales" name="scales" checked>
     <script src="app.js"></script>
 </body>
+
 </html>
