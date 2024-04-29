@@ -1,0 +1,33 @@
+#sample {
+  /* 透明度 */
+  /* アルファチャンネル */
+  background-color: rgba(255, 255, 255, 1);
+  /* 要素自体に適用 */
+  opacity: 0.5;
+
+  /* 要素の配置方法 */
+  /* 規定値 */
+  position: static;
+  /* 自分自身からの相対位置 */
+  top: 100px;
+  position: relative;
+  /* 要素空間を作成しない */
+  position: absolute;
+
+  /* スタイル適用のモーション速度 */
+  /* 1秒かけて適用する(丸にするときのみ2秒かける) */
+  transition: background-color 1s, border-radius 2s;
+  /* 設定した時間の中で変化速度を指定する */
+  transition-timing-function: linear;
+
+  /* 要素を変形させたりする */
+  /* 右回りに指定した分だけ回転 */
+  transform: rotate(45deg);
+  /* 変形させる軸の調整 */
+  transform-origin: center;
+
+  /* background系のスタイル一括適用 */
+  background: no-repeat url() chartreuse;
+}
+
+
