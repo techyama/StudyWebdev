@@ -1,6 +1,11 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 const port = 3000;
+
+// viewsディレクトリの設定
+// __dirnameは、このファイルが存在するパスを値として持つ
+app.set('views', path.join(__dirname, 'views'));
 
 // テンプレートエンジンの宣言(EJS)
 app.set('view engine', 'ejs');
