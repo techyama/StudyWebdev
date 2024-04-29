@@ -26,6 +26,18 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/r/:param', (req, res) => {
+    const { param } = req.params;
+    res.render('pathParam', {param});
+});
+
+app.get('/rand', (req, res) => {
+    const num = Math.floor(Math.random() * 10) + 1;
+    // 第二引数にJSON形式でテンプレートに変数を渡せる(キー名とテンプレートで使用する変数名は合わせる)
+    res.render('random', {rand: num});
+});
+
+
 // 想定外のパス
 app.get('*', (req, res) => {
     res.send('そんなパスは知らない！！！');
