@@ -1,0 +1,42 @@
+データベース切替
+$ use DB名
+
+DB一覧表示
+$ show dbs
+
+今使用中のDBを表示
+$ db
+
+コレクションを表示
+$ show collections
+
+BSON
+→バイナリ版のJSONであり、テキストベースのJSONに比べてコンパクトでコンピュータにとって扱いやすい
+
+
+MongoDBにおけるCRUD
+・挿入
+db.コレクション名.insertOne()→一つのみ
+例 db.dogs.insertOne({name: 'ポチ', age: 3, breed: 'corgi', catFriendly: true})
+db.コレクション名.insertMany()→複数のみ
+db.コレクション名.insert()→一つでも複数でも可
+
+
+・検索
+db.コレクション名.find()
+db.コレクション名.findOne()
+db.コレクション名.find({キー: 値, ...}(検索条件))
+
+
+・更新
+db.コレクション名.updateOne(検索条件, {$set: {更新対象のキー: 更新対象の値, ...}})
+※更新対象のキーが無ければ追加される
+db.コレクション名.updateMany()
+db.コレクション名.replaceOne()
+
+
+・削除
+db.コレクション名.deleteOne()
+db.コレクション名.deleteMany()
+※引数に「{}」と空のオブジェクトを渡すとコレクション内の全てのデータを削除する
+
