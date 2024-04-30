@@ -32,9 +32,10 @@ app.get('/r/:param', (req, res) => {
 });
 
 app.get('/rand', (req, res) => {
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const num = Math.floor(Math.random() * 10) + 1;
     // 第二引数にJSON形式でテンプレートに変数を渡せる(キー名とテンプレートで使用する変数名は合わせる)
-    res.render('random', {rand: num});
+    res.render('random', {rand: num, nums});
 });
 
 
