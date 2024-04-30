@@ -35,5 +35,6 @@ app.get('/form', (req, res) => {
 
 // POST
 app.post('/form', (req, res) => {
-    res.send('POST /form response');
+    // 引数のパスへリダイレクト
+    res.redirect('/');
 });
