@@ -13,7 +13,12 @@ mongoose.connect('mongodb://localhost:27017/movieApp', {useNewUrlParser: true, u
 
 // スキーマ定義
 const movieScema = new mongoose.Schema({
-    title: String,
+    // スキーマのバリデーション
+    title: {
+        type: String,
+        require: true,
+        maxLength: 10
+    },
     year: Number,
     score: Number,
     rating: String
