@@ -3,8 +3,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// viewsディレクトリの設定
+// CSSやJSなどの静的ファイルの適用(publicディレクトリ内を適用)
 // __dirnameは、このファイルが存在するパスを値として持つ
+app.use(express.static(path.join(__dirname, 'public'))); 
+
+// viewsディレクトリの設定
 app.set('views', path.join(__dirname, 'views'));
 
 // テンプレートエンジンの宣言(EJS)
