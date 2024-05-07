@@ -26,6 +26,7 @@ app.set('views', 'views');
 app.use(express.urlencoded({ extended: true }));
 app.use(session({ secret: 'mysecret' }));
 
+// セッションにユーザーIDが無ければログイン画面へリダイレクトするミドルウェア
 const requireLogin = (req, res, next) => {
     if (!req.session.user_id) {
         return res.redirect('/login');
@@ -57,7 +58,9 @@ app.get('/login', (req, res) => {
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
+    // リクエストのあったユーザー情報で認証可否チェック
     const foundUser = await User.findAndValidate(username, password);
+    // リクエストのユーザー情報が正しかったらセッションにユーザーID登録
     if (foundUser) {
         req.session.user_id = foundUser._id;
         res.redirect('/secret');
@@ -67,7 +70,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.post('/logout', (req, res) => {
-    // req.session.user_id = null;
+    // セッションの破棄
     req.session.destroy();
     res.redirect('/login');
 });

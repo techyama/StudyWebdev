@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+// 引数で受け取ったユーザー情報で認証可否チェック
 userSchema.statics.findAndValidate = async function (username, password) {
     const foundUser = await this.findOne({ username });
     const isValid = await bcrypt.compare(password, foundUser.password);
